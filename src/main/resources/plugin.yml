@@ -1,0 +1,23 @@
+name: StrayEC
+version: '2.2'
+main: org.strayzii.strayEC.StrayEC
+api-version: '1.21'
+
+depend:
+  - LuckPerms
+
+permissions:
+  strayec.reload:
+    description: "reloads the plugin."
+    default: op
+  strayec.lookothers:
+    description: "enables the feature."
+    default: op
+  strayec.openself:
+    description: "allows player to look in his ender chest"
+    default: op
+
+commands:
+  strayec:
+    description: "The main command"
+    aliases: ["ec"]

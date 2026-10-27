@@ -1,0 +1,46 @@
+# it calculates itself (27 + total-slots)
+total-slots: 9 # 36
+
+ec-command: true # do players can use /ec command?
+
+groups:
+  default:
+    allowed-slots: 0 # 27
+  vip:
+    allowed-slots: 5 # 32
+  plus:
+    allowed-slots: 9 # 36 it's a maximum.
+
+banned-items:
+  enabled: true
+  items:
+    - TOTEM_OF_UNDYING
+
+# Supports some placeholders
+# $player_name = player name.
+# $player_group = group name.
+# $slot_number = slot number.
+blocked-slot:
+  material: RED_STAINED_GLASS_PANE
+  displayName: "&cЗакрыто."
+  lore:
+    - "&fПриобретите себе привилегию $player_group"
+    - "&fДля разблокировки слота: &e$slot_number."
+
+banned-tags:
+  - "strayweapons:stun_axe"
+  - "strayweapons:trial_sword"
+  - "strayweapons:jungle_spear"
+  - "strayweapons:poseidon_trident"
+  - "strayweapons:thor_hammer"
+
+messages:
+  reload: "&aКонфигурация успешно перезагружена!"
+  player-doesnt-exist: "&cТакого игрока не существует."
+  no-permission: "&cУ вас нет прав на использование данной комманды."
+  usage: "/strayec < reload / player >"
+  ec-not-allowed: "&cНа данный момент доступ в виртуальный эндер сундук запрещен."
+
+  banned-item: "§x§4§4§9§8§D§Bᴇɴᴅᴇʀᴄʜᴇsᴛ &8»&r §x§B§5§C§4§E§0Данный предмет запрещен в Эндер Сундуке"
+  banned-item-in-container: "§x§4§4§9§8§D§Bᴇɴᴅᴇʀᴄʜᴇsᴛ &8»&r §x§B§5§C§4§E§0В этом хранилище содержиться запрещенный предмет!"
+
